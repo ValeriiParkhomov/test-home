@@ -1,0 +1,30 @@
+* {
+      box-sizing: border-box;/* Для того, щоб розмір блоку відповідав заданому і рамка з падінгами шли розмірами всередину */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    flex-basis: 100px;
+    height: 100px;
+    background-color: rgb(187, 13, 13);
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.item:nth-child(2) {
+    order: 3;
+    width: 60px;
+    height: 60px;
+    align-self: end;
+}
+
+.item:nth-child(4) {
+    width: 60px;
+    height: 60px;
+    align-self: end;
+}
