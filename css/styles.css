@@ -371,14 +371,14 @@ address {
 }
 
 /* Footer */
-/* .footer {
+.footer {
     padding: 32px 0;
 }
 
 .footer-container {
     display: flex;
     gap: 20px;
-} */
+}
 
 .footer-nav,
 .footer-address {
