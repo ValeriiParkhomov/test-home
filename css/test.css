@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    /* Для того, щоб розмір блоку відповідав заданому і рамка з падінгами шли розмірами всередину */
+}
+
+.parent {
+    border: 1px dotted;
+    padding: 20px;
+}
+
+.item.red {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(187, 13, 13);
+
+}
+
+.item.green {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+
+}
+
+.item.blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
