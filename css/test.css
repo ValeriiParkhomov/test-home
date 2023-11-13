@@ -6,13 +6,30 @@
 .parent {
     border: 1px dotted;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 .item.red {
-    position: relative;
     width: 150px;
     height: 150px;
     background-color: rgb(187, 13, 13);
+    transform: translateX(-20px);
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.item.red:hover {
+    background-color: pink;
 
 }
 
@@ -20,11 +37,34 @@
     width: 50px;
     height: 50px;
     background-color: green;
+    transform: scale(0.5);
 
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(358deg)
+    }
 }
 
 .item.blue {
     width: 100px;
     height: 100px;
     background-color: blue;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.item.orange {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 153, 0);
+    transform: skew(170deg, 15deg);
 }
