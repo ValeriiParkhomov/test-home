@@ -13,7 +13,7 @@
       rel="stylesheet"
     /> -->
   <!-- Styles -->
-  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="./scss/main.min.css" />
 </head>
 
 <body>
@@ -181,24 +181,22 @@
               Приєднуйся до мережі пекарень
             </h2>
             <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-            <form name="contact-form" autocomplete="off" novalidate>
+            <form name="contact-form" autocomplete="off">
               <div class="form-field">
                 <label class="form-label visually-hidden" for="user-name">Iм'я</label>
-                <input class="form-input" type="text" id="user-name" name="user-name" placeholder="Iм'я" />
+                <input class="form-input" type="text" id="user-name" name="user-name" placeholder="Iм'я" required />
               </div>
 
               <div class="form-field">
                 <label class="form-label visually-hidden" for="user-phone">Телефон</label>
-                <input class="form-input" type="tel" id="user-phone" name="user-phone" placeholder="Телефон" />
+                <input class="form-input" type="tel" id="user-phone" name="user-phone" placeholder="Телефон" required />
               </div>
 
               <div class="form-field">
-                <label class="form-label visually-hidden" for="user-email">Е-mail</label>
+                <label class="form-label visually-hidden" for="user-email" required>Е-mail</label>
                 <input class="form-input" type="email" id="user-email" name="user-email"
                   placeholder="Електронна пошта" />
               </div>
-
-
               <button class="form-button button" type="submit">Замовити дзвінок</button>
               <p class="form-terms">Натискаючи на кнопку я погоджуюсь з <a href="#" class="form-temps-link">політикою
                   конфіденційності</a></p>
@@ -275,20 +273,21 @@
       <button class="modal-btn-close" type="button">Close</button>
       <h2>Замовити дзвінок</h2>
       <p>Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-      <form name="contact-form" autocomplete="off" novalidate>
+      <form name="contact-form" autocomplete="off">
         <div class="form-field">
           <label class="form-label visually-hidden" for="user-name">Iм'я</label>
-          <input class="form-input" type="text" id="user-name" name="user-name" placeholder="Iм'я" />
+          <input class="form-input" type="text" id="user-name" name="user-name" placeholder="Iм'я" required />
         </div>
 
         <div class="form-field">
           <label class="form-label visually-hidden" for="user-phone">Телефон</label>
-          <input class="form-input" type="tel" id="user-phone" name="user-phone" placeholder="Телефон" />
+          <input class="form-input" type="tel" id="user-phone" name="user-phone" placeholder="Телефон" required />
         </div>
 
         <div class="form-field">
           <label class="form-label visually-hidden" for="user-email">Email</label>
-          <input class="form-input" type="email" id="user-email" name="user-email" placeholder="Електронна пошта" />
+          <input class="form-input" type="email" id="user-email" name="user-email" placeholder="Електронна пошта"
+            required />
         </div>
 
         <button class="form-button button" type="submit">Замовити дзвінок</button>
