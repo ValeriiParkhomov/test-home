@@ -1,0 +1,29 @@
+.chefs-title {
+    margin: 0 auto 80px;
+    position: relative;
+    display: block;
+}
+
+.chef-title {
+    margin-bottom: 16px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.chefs-title::after,
+.chefs-title::before {
+    /* display: block;  - нема потреби через те що position автоматично перетворює на display: block!*/
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    content: '';
+    bottom: 24px;
+    position: absolute;
+}
+
+.chefs-title::before {
+    left: 0;
+}
+
+.chefs-title::after {
+    right: 0;
+}
