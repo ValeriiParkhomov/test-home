@@ -1,29 +1,36 @@
-.chefs-title {
-    margin: 0 auto 80px;
-    position: relative;
-    display: block;
-}
+.chefs-section {
 
-.chef-title {
-    margin-bottom: 16px;
-    font-size: 40px;
-    font-weight: 600;
-}
+    &__title {
+        margin: 0 auto 80px;
+        position: relative;
+        display: block;
 
-.chefs-title::after,
-.chefs-title::before {
-    /* display: block;  - нема потреби через те що position автоматично перетворює на display: block!*/
-    width: 352px;
-    border: 2px solid var(--color-brand-light);
-    content: '';
-    bottom: 24px;
-    position: absolute;
-}
+        &::after,
+        &::before {
+            /* display: block;  - нема потреби через те що position автоматично перетворює на display: block!*/
+            width: 352px;
+            border: 2px solid var(--color-brand-light);
+            content: '';
+            bottom: 24px;
+            position: absolute;
+        }
 
-.chefs-title::before {
-    left: 0;
-}
+        &::before {
+            left: 0;
+        }
 
-.chefs-title::after {
-    right: 0;
+        &::after {
+            right: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 30px;
+    }
+
+    &__item {
+        flex-basis: calc((100% - 30px) / 2);
+    }
 }
