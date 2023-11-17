@@ -1,13 +1,13 @@
 .backdrop {
-    justify-content: center;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
     background-color: rgb(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
@@ -44,7 +44,6 @@
     }
 
     &__button {
-        display: block;
         margin: 0 auto 24px;
 
     }
