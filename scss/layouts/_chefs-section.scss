@@ -1,18 +1,26 @@
 .chefs-section {
 
     &__title {
-        margin: 0 auto 80px;
+        margin: 0 auto 24px;
         position: relative;
         display: block;
 
+        @media screen and (min-width: $bp-desktop) {
+            margin-bottom: 80px;
+        }
+
         &::after,
         &::before {
-            /* display: block;  - нема потреби через те що position автоматично перетворює на display: block!*/
+            display: none;
             width: 352px;
             border: 2px solid var(--color-brand-light);
             content: '';
             bottom: 24px;
             position: absolute;
+
+            @media screen and (min-width: $bp-tablet) {
+                display: block;
+            }
         }
 
         &::before {
@@ -27,10 +35,20 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        gap: 40px 30px;
+        gap: 20px;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            gap: 40px 30px;
+
+        }
     }
 
     &__item {
-        flex-basis: calc((100% - 30px) / 2);
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-basis: calc((100% - 30px) / 2);
+
+        }
     }
 }
