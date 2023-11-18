@@ -2,22 +2,50 @@
     padding-bottom: 96px;
 
     &__title {
-        margin-bottom: 16px;
+        margin-bottom: 8px;
+        font-weight: 600;
+
+        @media screen and (min-width: $bp-tablet) {
+            margin-bottom: 16px;
+            font-weight: 900;
+        }
     }
 
     &__container {
         display: flex;
-        gap: 32px;
+        gap: 24px;
+        flex-direction: column;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            gap: 32px;
+        }
     }
 
     &__form-field {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
+
+        @media screen and (min-width: $bp-tablet) {
+            margin-bottom: 24px;
+        }
     }
 
     &__map {
         flex-shrink: 0;
         border-radius: 16px;
         border: none;
+        margin: 0 -24px;
+        height: 176px;
+
+        @media screen and (min-width: $bp-tablet) {
+            width: 320px;
+            height: 500px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            width: 600px;
+            height: 595px;
+        }
     }
 
     &__button {
