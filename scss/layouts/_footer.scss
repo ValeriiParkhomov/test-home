@@ -1,11 +1,16 @@
 .footer {
-    padding: 32px 0;
+    margin-top: -20px;
+    padding: 32px 56px;
     position: relative;
     background-image: url(../images/footer-bg.png);
     background-color: var(--color-primary-dark);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media screen and (min-width: $bp-tablet) {
+        margin-top: 48px;
+    }
 
     &::before,
     &::after {
@@ -16,22 +21,36 @@
     }
 
     &::before {
-        width: 180px;
-        height: 120px;
-        background-image: url(../images/decor-bread-small.png);
+        bottom: 335px;
+        left: 0;
+        width: 85px;
+        height: 206px;
+        background-image: url(../images/decor-bread-left.png);
+
+        @media screen and (min-width: $bp-tablet) {
+            bottom: 0;
+            width: 180px;
+            height: 120px;
+            background-image: url(../images/decor-bread-small.png);
+        }
     }
 
     &::after {
         right: 0;
-        width: 380px;
-        height: 190px;
-        background-image: url(../images/decor-bread-large.png);
+        width: 100px;
+        height: 90px;
+        background-image: url(/images/decor-bread-right.png);
+
+        @media screen and (min-width: $bp-tablet) {
+            width: 380px;
+            height: 190px;
+            background-image: url(../images/decor-bread-large.png);
+        }
     }
 
     &__container {
         display: flex;
         flex-direction: column;
-        gap: 20px;
 
         @media screen and (min-width: $bp-tablet) {
             flex-direction: row;
@@ -42,13 +61,13 @@
     &__address {
         display: flex;
         flex-direction: column;
-        gap: 20px;
         text-align: center;
 
         @media screen and (min-width: $bp-tablet) {
             flex-direction: row;
             flex-basis: 50%;
             text-align: left;
+            gap: 20px;
         }
     }
 
@@ -57,16 +76,26 @@
         flex-grow: 1;
     }
 
+    &__logo {
+        margin-bottom: 32px;
+    }
+
     &__address-list,
     &__address-info {
         flex-grow: 1;
+        z-index: 1;
     }
 
     &__address-link {
+        margin-bottom: 16px;
         color: var(--color-primary-light);
         font-size: 16px;
         font-weight: 300;
         text-decoration: none;
+
+        @media screen and (min-width: $bp-tablet) {
+            margin-bottom: 16px;
+        }
 
         &:hover {
             color: var(--color-brand-normal);
@@ -76,11 +105,24 @@
 
     &__address-icon {
         fill: var(--color-primary-light);
+        display: block;
 
         &:hover {
             fill: var(--color-brand-normal);
         }
     }
+
+    &__address-socials {
+        display: flex;
+        justify-content: center;
+        margin-top: -2px;
+        gap: 22px;
+
+        @media screen and (min-width: $bp-tablet) {
+            justify-content: left;
+        }
+    }
+
 
     &__address-copyright {
         color: var(--color-secondary-dark);
@@ -88,6 +130,9 @@
     }
 
 }
+
+
+
 
 .test-box {
     width: 300px;
