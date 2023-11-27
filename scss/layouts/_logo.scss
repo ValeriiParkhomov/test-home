@@ -1,10 +1,11 @@
 .logo {
     display: flex;
     flex-direction: column;
-    color: var(--color-primary-light);
     font-family: 'Gill Sans', sans-serif;
     font-size: 16px;
     text-align: left;
+    text-transform: uppercase;
+    line-height: 1.15;
 
     @media screen and (min-width: $bp-tablet) {
         font-size: 24px;

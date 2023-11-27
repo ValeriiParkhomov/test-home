@@ -14,3 +14,10 @@
     border: 2px solid var(--color-brand-normal);
     color: var(--color-brand-normal);
 }
+
+.close-button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    fill: var(--color-primary-dark);
+}
